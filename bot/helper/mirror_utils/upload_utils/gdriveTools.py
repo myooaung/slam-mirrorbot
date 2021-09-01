@@ -177,7 +177,8 @@ class GoogleDriveHelper:
             'role': 'writer',
             'type': 'user',
             'value': None,
-            'withLink': True
+            'withLink': True,
+            'emailAddress':'zayyar@yes.my'
         }
         return self.__service.permissions().create(supportsTeamDrives=True, fileId=drive_id,
                                                    body=permissions).execute()
