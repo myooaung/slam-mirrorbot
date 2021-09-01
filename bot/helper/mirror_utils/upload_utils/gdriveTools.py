@@ -174,8 +174,8 @@ class GoogleDriveHelper:
            retry=retry_if_exception_type(HttpError), before=before_log(LOGGER, logging.DEBUG))
     def __set_permission(self, drive_id):
         permissions = {
-            'role': 'reader',
-            'type': 'anyone',
+            'role': 'writer',
+            'type': 'user',
             'value': None,
             'withLink': True
         }
@@ -189,7 +189,7 @@ class GoogleDriveHelper:
         # File body description
         file_metadata = {
             'name': file_name,
-            'description': 'Uploaded by Slam Mirrorbot',
+            'description': 'Uploaded by Myo Aung',
             'mimeType': mime_type,
         }
         try:
